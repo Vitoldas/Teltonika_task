@@ -1,0 +1,13 @@
+
+Page 1
+
+Add password validation rule if passwords don't match string = 'Passwords don't match'
+
+update other validation fields to be more secure
+
+page 2
+
+Ability to click anywhere on the screen in order to deselect selected input fields
+Fix responsiveness
+
+Footer: Add Routing and functionality after everything else is done media querries if still time.

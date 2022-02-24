@@ -1,0 +1,230 @@
+.category--container {
+  background-color: rgb(243, 241, 241);
+  border-radius: 10px;
+  color: rgb(2, 3, 99);
+  width: 60%;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.category--header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgb(236, 236, 236);
+  h2 {
+    padding-bottom: 10px;
+  }
+}
+.dropdown {
+  width: 250px;
+  position: relative;
+  user-select: none;
+}
+.dropdown .dropdown-btn {
+  padding: 15px 20px;
+  background: #fff;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  font-weight: bold;
+  color: rgb(2, 3, 99);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 110%;
+  width: 92%;
+  padding: 10px;
+  background-color: #fff;
+}
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 0;
+}
+.dropdown-item:hover {
+  background-color: antiquewhite;
+}
+
+.dropdown-card {
+  // display: flex;
+  // flex-direction: column;
+  margin-left: 10px;
+  h3 {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.position-wrapper {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.welcome-msg {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+  margin: 0 auto;
+  color: #fff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+th,
+td {
+  border: 1px solid #ffffff;
+  text-align: left;
+  padding: 8px;
+  font-size: 16px;
+}
+
+th {
+  background-color: rgb(0, 84, 166);
+}
+
+td {
+  background-color: rgb(30, 61, 113);
+}
+
+.position-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  label {
+    margin-bottom: 20px;
+  }
+}
+
+.category-btn {
+  margin: 20px 13%;
+  padding: 10px 40px;
+  outline: none;
+  background-color: transparent;
+  color: rgb(30, 61, 113);
+  border-radius: 6px;
+  border: 1px solid rgb(30, 61, 113);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.category-btn:hover {
+  background-color: rgb(30, 61, 113);
+  transition: 0.4s;
+  color: #fff;
+  box-shadow: 0px 0px 0px 1px rgb(248, 248, 248);
+}
+
+.select-styling {
+  display: flex;
+  width: 200px;
+  padding: 14px 15px;
+  background: #fff;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(2, 3, 99);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: none;
+  cursor: pointer;
+}
+.select-styling:hover {
+  background-color: rgb(30, 61, 113);
+  transition: 0.4s;
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 0px 1px rgb(248, 248, 248);
+}
+
+.filter-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  color: rgb(30, 61, 113);
+  font-size: 18px;
+  .filter-list__item {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+  input {
+    padding: 10px 20px;
+    color: rgb(30, 61, 113);
+    border: none;
+    outline: none;
+    box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.06);
+  }
+  input::placeholder {
+    color: rgb(30, 61, 113);
+    font-size: 14px;
+  }
+}
+.position-card {
+  display: flex;
+  flex-direction: column;
+  margin: 1px 10px;
+}
+
+.btn-navigate {
+  padding: 2px 4px;
+  margin: 2px 1px;
+}
+
+@media (max-width: 940px) {
+  .position-wrapper {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+  .filter-list {
+    margin-top: 0px;
+  }
+  .category-btn {
+    margin-left: 40%;
+  }
+}
+
+@media (max-width: 560px) {
+  .category--input {
+    margin-top: 20px;
+    width: 60%;
+  }
+  .select-styling {
+    width: 150px;
+  }
+}
+@media (max-width: 430px) {
+  .category-btn {
+    margin-left: 25%;
+    margin-top: 4px;
+  }
+  .position-wrapper {
+    margin-top: 0px;
+  }
+  .category-h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+  }
+}

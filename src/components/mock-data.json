@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "yourCountry": "Lithuania",
+    "desiredPosition": "Front-End Developer",
+    "seniority": "Junior"
+  },
+  {
+    "id": 2,
+    "yourCountry": "Chile",
+    "desiredPosition": "Human Resources manager",
+    "seniority": "Mid level"
+  },
+  {
+    "id": 3,
+    "yourCountry": "Brazil",
+    "desiredPosition": "Sales Team Lead",
+    "seniority": "Senior"
+  },
+  {
+    "id": 4,
+    "yourCountry": "Chile",
+    "desiredPosition": "Human Resources manager",
+    "seniority": "Mid level"
+  }
+]
