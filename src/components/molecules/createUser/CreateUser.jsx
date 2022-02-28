@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import SubmitButton from '../button/SubmitButton';
+import SubmitButton from '../../atoms/button/SubmitButton';
 import './createUser.scss';
 
 function CreateUser() {

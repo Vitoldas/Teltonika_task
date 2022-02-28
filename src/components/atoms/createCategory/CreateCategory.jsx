@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import data from '../mock-data.json';
+import data from '../../mock-data.json';
 import { nanoid } from 'nanoid';
 import './createCategory.scss';
 

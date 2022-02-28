@@ -1,13 +1,13 @@
 import React from 'react';
+import './homePage.scss';
 import Header from '../../atoms/header/Header';
-import Category from '../../atoms/createCategory/CreateCategory';
+import CreateUser from '../../molecules/createUser/CreateUser';
 import Footer from '../../atoms/footer/Footer';
-
-export const CategoryPage = () => {
+export const HomePage = () => {
   return (
     <div>
       <Header />
-      <Category />
+      <CreateUser />
       <Footer />
     </div>
   );

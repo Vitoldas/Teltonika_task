@@ -1,10 +1,10 @@
 import React from 'react';
-import PaperPlane from '../../assets/paper_plane.svg';
-import LinkedIn from '../../assets/linkedin.png';
-import Facebook from '../../assets/facebook.png';
-import Twitter from '../../assets/twitter.png';
-import Instagram from '../../assets/instagram.png';
-import Youtube from '../../assets/youtube.png';
+import PaperPlane from '../../../assets/paper_plane.svg';
+import LinkedIn from '../../../assets/linkedin.png';
+import Facebook from '../../../assets/facebook.png';
+import Twitter from '../../../assets/twitter.png';
+import Instagram from '../../../assets/instagram.png';
+import Youtube from '../../../assets/youtube.png';
 import './footer.scss';
 
 const Footer = () => {

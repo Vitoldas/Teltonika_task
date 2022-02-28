@@ -1,6 +1,6 @@
-import { HomePage } from './components/container/HomePage';
-import { CategoryPage } from './components/category-page/CategoryPage';
-import ErrorPage from './components/errorPage/ErrorPage';
+import { HomePage } from './components/organisms/HomePage/HomePage';
+import { CategoryPage } from './components/organisms/category-page/CategoryPage';
+import ErrorPage from './components/organisms/errorPage/ErrorPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
