@@ -116,15 +116,15 @@ input::placeholder {
   color: rgb(255, 0, 0);
 }
 .btn-wrapper {
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: space-between;
-  // max-width: 99%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 99%;
 }
 @media (max-width: 830px) {
   .card {
     text-align: left;
-    width: 70%;
+    width: 80%;
     height: 700px;
 
     .card--header {
@@ -157,15 +157,14 @@ input::placeholder {
     display: flex;
   }
 }
-@media (max-width: 620px) {
+@media (max-width: 710px) {
   .card {
     height: 660px;
   }
   .input--wrapper {
     width: 30%;
   }
-}
-@media (max-width: 620px) {
+
   label {
     margin-bottom: -10px;
   }
@@ -181,6 +180,13 @@ input::placeholder {
   }
   .btn-wrapper {
     margin-top: 10px;
+  }
+  .card--input {
+    padding: 10px 20px;
+  }
+
+  .select-options {
+    padding: 10px 30px;
   }
 }
 
@@ -198,5 +204,8 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .input--styles {
+    width: auto;
   }
 }
