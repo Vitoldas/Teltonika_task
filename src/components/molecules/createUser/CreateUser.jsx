@@ -11,7 +11,7 @@ function CreateUser() {
     repeatPassword: '',
     email: '',
     age: '',
-    category: ''
+    category: '',
   };
 
   const [formValues, setFormValues] = useState(initialValues);
@@ -79,17 +79,41 @@ function CreateUser() {
     }
     return errors;
   };
+  // labels
+  const name = 'Name';
+  const lastName = 'Last Name';
+  const password = 'Password';
+  const repeatPassword = 'Repeat Password';
+  const age = 'Age';
+  const gender = 'Gender';
+  const aboutUs = 'Where did you hear about us?';
+  const email = 'Email';
+  // Other
+  const registration = 'Registration';
+  const choose = 'Choose';
+  const onboarding = "Let's get you on board";
+  const nextPage = 'Next Page';
+  const linkedIn = 'LinkedIn';
+  const twitter = 'Twitter';
+  const cvBank = 'CVbankas';
+  const facebook = 'Facebook';
+  const reddit = 'Reddit';
+  const toSay = 'Prefer not to say';
+  const male = 'Male';
+  const female = 'Female';
+  const other = 'Other';
+
   return (
     <div className="card--container">
       <div className="card">
         <div className="card--header">
-          <h2>Registration</h2>
-          <p>Let's get you on board!</p>
+          <h2>{registration}</h2>
+          <p>{onboarding}</p>
         </div>
         <form onSubmit={handleSubmit}>
           <div className="card--main">
             <div className="input--wrapper input-media-620">
-              <label>Name</label>
+              <label>{name}</label>
               <input
                 type="text"
                 name="firstName"
@@ -101,7 +125,7 @@ function CreateUser() {
               <p className="error-msg">{formErrors.firstName}</p>
             </div>
             <div className="input--wrapper input-media-620">
-              <label>Last Name</label>
+              <label>{lastName}</label>
               <input
                 type="text"
                 name="lastName"
@@ -113,7 +137,7 @@ function CreateUser() {
               <p className="error-msg">{formErrors.lastName}</p>
             </div>
             <div className="input--wrapper input-media-620">
-              <label>Password</label>
+              <label>{password}</label>
               <input
                 type="password"
                 name="password"
@@ -125,7 +149,7 @@ function CreateUser() {
               <p className="error-msg">{formErrors.password}</p>
             </div>
             <div className="input--wrapper input-media-620">
-              <label>Repeat Password</label>
+              <label>{repeatPassword}</label>
               <input
                 type="text"
                 name="repeatPassword"
@@ -137,7 +161,7 @@ function CreateUser() {
               <p className="error-msg">{formErrors.repeatPassword}</p>
             </div>
             <div className="input--wrapper mg-top input-media-620">
-              <label>Age</label>
+              <label>{age}</label>
               <input
                 type="number"
                 name="age"
@@ -149,7 +173,7 @@ function CreateUser() {
               <p className="error-msg">{formErrors.age}</p>
             </div>
             <div className="input--wrapper input-media-620 ">
-              <label>Gender</label>
+              <label>{gender}</label>
               <select
                 required
                 className="input--styles select-options"
@@ -157,22 +181,22 @@ function CreateUser() {
                 select
               >
                 <option value="prefer not to say" className="reg-option">
-                  Prefer not to say
+                  {toSay}
                 </option>
                 <option value="male" className="reg-option">
-                  Male
+                  {male}
                 </option>
                 <option value="female" className="reg-option">
-                  Female
+                  {female}
                 </option>
                 <option value="other" className="reg-option">
-                  Other
+                  {other}
                 </option>
               </select>
             </div>
           </div>
           <div className="input--wrapper  input-media-620">
-            <label>Email</label>
+            <label>{email}</label>
             <input
               type="email"
               name="email"
@@ -184,7 +208,7 @@ function CreateUser() {
             <p className="error-msg">{formErrors.email}</p>
           </div>
           <div className="input--wrapper about-us--form input-media-620">
-            <label>Where did you hear about us?</label>
+            <label>{aboutUs}</label>
             <select
               type="text"
               name="category"
@@ -195,34 +219,34 @@ function CreateUser() {
               onChange={handleChange}
             >
               <option value="Choose" className="reg-option">
-                Choose
+                {choose}
               </option>
               <option
                 value="LinkedIn"
                 className="reg-option"
                 aria-label="LinkedIn"
               >
-                LinkedIn
+                {linkedIn}
               </option>
               <option value="CVBank" className="reg-option" aria-label="CVBank">
-                CVBank
+                {cvBank}
               </option>
               <option
                 value="Twitter"
                 className="reg-option"
                 aria-label="Twitter"
               >
-                Twitter
+                {twitter}
               </option>
               <option
                 value="Facebook"
                 className="reg-option"
                 aria-label="Facebook"
               >
-                Facebook
+                {facebook}
               </option>
               <option value="Reddit" className="reg-option" aria-label="Reddit">
-                Reddit
+                {reddit}
               </option>
             </select>
           </div>
@@ -235,7 +259,7 @@ function CreateUser() {
                 navigate('../Create-category');
               }}
             >
-              Next page
+              {nextPage}
             </button>
           </div>
         </form>

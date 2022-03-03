@@ -10,45 +10,35 @@ const CreateCategory = () => {
     desiredPosition: '',
     seniority: ''
   });
-
   const handleAddFormChange = (event) => {
     event.preventDefault();
-
     const fieldName = event.target.getAttribute('name');
     const fieldValue = event.target.value;
-
     const newFormData = { ...addFormData };
     newFormData[fieldName] = fieldValue;
-
     setAddFormData(newFormData);
   };
 
   const handleAddFormSubmit = (event) => {
     event.preventDefault();
-
     const newContact = {
       id: nanoid(),
       yourCountry: addFormData.yourCountry,
       desiredPosition: addFormData.desiredPosition,
       seniority: addFormData.seniority
     };
-
     const newContacts = [...contacts, newContact];
     setContacts(newContacts);
   };
-
   useEffect(() => {
     const data = localStorage.getItem('saved-positions');
     if (data) {
       setContacts(JSON.parse(data));
     }
   }, []);
-
   useEffect(() => {
     localStorage.setItem('saved-positions', JSON.stringify(contacts));
   });
-
-  // Searchbar
   const [searchItem, setSearchItem] = useState('');
   return (
     <div>
@@ -179,21 +169,3 @@ const CreateCategory = () => {
 };
 
 export default CreateCategory;
-
-/*
-
-Location
-
-Teltonika regions here
-
-Job category
-
-3 job categories
-
-Experience level
-
-Junior
-Mid
-Senior
-
-*/
