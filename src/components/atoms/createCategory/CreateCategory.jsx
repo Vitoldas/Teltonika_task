@@ -8,7 +8,7 @@ const CreateCategory = () => {
   const [addFormData, setAddFormData] = useState({
     yourCountry: ' ',
     desiredPosition: '',
-    seniority: ''
+    seniority: '',
   });
   const handleAddFormChange = (event) => {
     event.preventDefault();
@@ -25,7 +25,7 @@ const CreateCategory = () => {
       id: nanoid(),
       yourCountry: addFormData.yourCountry,
       desiredPosition: addFormData.desiredPosition,
-      seniority: addFormData.seniority
+      seniority: addFormData.seniority,
     };
     const newContacts = [...contacts, newContact];
     setContacts(newContacts);
@@ -40,18 +40,45 @@ const CreateCategory = () => {
     localStorage.setItem('saved-positions', JSON.stringify(contacts));
   });
   const [searchItem, setSearchItem] = useState('');
+
+  const welcome = 'Welcome';
+  const createCategories = 'You can create categories here';
+  const selectCountry = 'Select your country';
+  const selectPosition = 'Select desired position';
+  const selectSeniority = 'Select Seniority';
+  const filterCategories = 'Filter Categories';
+  const countries = 'Countries';
+  const lithuania = 'Lithuania';
+  const chile = 'Chile';
+  const vietnam = 'Vietnam';
+  const peru = 'Peru';
+  const positions = 'Positions';
+  const designer = 'UI/UX designer';
+  const developerFront = 'Front-End Developer';
+  const hr = 'Human Resources manager';
+  const copywritter = 'Copywritter';
+  const salesTl = 'Sales Team Lead';
+  const seniority = 'Seniority';
+  const junior = 'Junior';
+  const mid = 'Mid level';
+  const senior = 'Senior';
+  const add = 'add';
+  const country = 'Country';
+  const desiredPosition = 'Desired Position';
+  const seniorityLevel = 'Seniority';
+
   return (
     <div>
       <div className="category--container">
         <div className="category--header">
-          <h2>Welcome</h2>
-          <h3>You can create categories here</h3>
+          <h2>{welcome}</h2>
+          <h3>{createCategories}</h3>
         </div>
         <form className="category-form" onSubmit={handleAddFormSubmit}>
           <div className="position-wrapper">
             <div className="position-card">
               <label>
-                <h3 className="category-h3">Select your country</h3>
+                <h3 className="category-h3">{selectCountry}</h3>
               </label>
               <select
                 name="yourCountry"
@@ -59,18 +86,18 @@ const CreateCategory = () => {
                 className="select-styling"
               >
                 <option value="Choose value" disabled selected>
-                  Countries
+                  {countries}
                 </option>
-                <option value="Lithuania">Lithuania</option>
-                <option value="Chile">Chile</option>
-                <option value="Vietnam">Vietnam</option>
-                <option value="Brazil">Brazil</option>
-                <option value="Peru">Peru</option>
+                <option value="Lithuania">{lithuania}</option>
+                <option value="Chile">{chile}</option>
+                <option value="Vietnam">{vietnam}</option>
+                <option value="Brazil">{brazil}</option>
+                <option value="Peru">{peru}</option>
               </select>
             </div>
             <div className="position-card">
               <label>
-                <h3 className="category-h3">Select desired position</h3>
+                <h3 className="category-h3">{selectPosition}</h3>
               </label>
               <select
                 name="desiredPosition"
@@ -78,20 +105,18 @@ const CreateCategory = () => {
                 className="select-styling"
               >
                 <option value="Choose value" disabled selected>
-                  Positions
+                  {positions}
                 </option>
-                <option value="UI/UX designer">UI/UX designer</option>
-                <option value="Front-End Developer">Front-End Developer</option>
-                <option value="Human Resources manager">
-                  Human Resources manager
-                </option>
-                <option value="Copywritter">Copywritter</option>
-                <option value="Sales Team Lead">Sales Team Lead</option>
+                <option value="UI/UX designer">{designer}</option>
+                <option value="Front-End Developer">{developerFront}</option>
+                <option value="Human Resources manager">{hr}</option>
+                <option value="Copywritter">{copywritter}</option>
+                <option value="Sales Team Lead">{salesTl}</option>
               </select>
             </div>
             <div className="position-card">
               <label>
-                <h3 className="category-h3">Select seniority</h3>
+                <h3 className="category-h3">{selectSeniority}</h3>
               </label>
               <select
                 name="seniority"
@@ -99,23 +124,23 @@ const CreateCategory = () => {
                 className="select-styling"
               >
                 <option value="Choose value" disabled selected>
-                  Seniority
+                  {seniority}
                 </option>
-                <option value="Junior">Junior</option>
-                <option value="Mid Level">Mid level</option>
-                <option value="Senior">Senior</option>
+                <option value="Junior">{junior}</option>
+                <option value="Mid Level">{mid}</option>
+                <option value="Senior">{senior}</option>
               </select>
             </div>
           </div>
           <button type="submit" className="category-btn">
-            Add
+            {add}
           </button>
           <div className="searchbar-wrapper"></div>
         </form>
         <div className="filter-list">
           <div className="filter-list__item">
             <label>
-              <h3 className="category-h3">Filter Categories</h3>
+              <h3 className="category-h3">{filterCategories}</h3>
             </label>
           </div>
           <div className="filter-list__item">
@@ -133,9 +158,9 @@ const CreateCategory = () => {
       <table>
         <thead className="datas">
           <tr>
-            <th>Country</th>
-            <th>Desired Position</th>
-            <th>Seniority</th>
+            <th>{country}</th>
+            <th>{desiredPosition}</th>
+            <th>{seniorityLevel}</th>
           </tr>
         </thead>
         <tbody>
