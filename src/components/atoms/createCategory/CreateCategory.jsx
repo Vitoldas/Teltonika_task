@@ -51,6 +51,7 @@ const CreateCategory = () => {
   const lithuania = 'Lithuania';
   const chile = 'Chile';
   const vietnam = 'Vietnam';
+  const brazil = 'Brazil';
   const peru = 'Peru';
   const positions = 'Positions';
   const designer = 'UI/UX designer';
@@ -65,7 +66,6 @@ const CreateCategory = () => {
   const add = 'add';
   const country = 'Country';
   const desiredPosition = 'Desired Position';
-  const seniorityLevel = 'Seniority';
 
   return (
     <div>
@@ -160,7 +160,7 @@ const CreateCategory = () => {
           <tr>
             <th>{country}</th>
             <th>{desiredPosition}</th>
-            <th>{seniorityLevel}</th>
+            <th>{seniority}</th>
           </tr>
         </thead>
         <tbody>
