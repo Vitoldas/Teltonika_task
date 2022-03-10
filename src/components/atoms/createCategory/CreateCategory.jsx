@@ -85,7 +85,7 @@ const CreateCategory = () => {
                 onClick={handleAddFormChange}
                 className="select-styling"
               >
-                <option value="Choose value" disabled selected>
+                <option value="Choose value" disabled>
                   {countries}
                 </option>
                 <option value="Lithuania">{lithuania}</option>
@@ -104,7 +104,7 @@ const CreateCategory = () => {
                 onClick={handleAddFormChange}
                 className="select-styling"
               >
-                <option value="Choose value" disabled selected>
+                <option value="Choose value" disabled>
                   {positions}
                 </option>
                 <option value="UI/UX designer">{designer}</option>
@@ -123,7 +123,7 @@ const CreateCategory = () => {
                 onClick={handleAddFormChange}
                 className="select-styling"
               >
-                <option value="Choose value" disabled selected>
+                <option value="Choose value" disabled>
                   {seniority}
                 </option>
                 <option value="Junior">{junior}</option>
