@@ -41,44 +41,50 @@ const CreateCategory = () => {
   });
   const [searchItem, setSearchItem] = useState('');
 
-  const welcome = 'Welcome';
-  const createCategories = 'You can create categories here';
-  const selectCountry = 'Select your country';
-  const selectPosition = 'Select desired position';
-  const selectSeniority = 'Select Seniority';
-  const filterCategories = 'Filter Categories';
-  const countries = 'Countries';
-  const lithuania = 'Lithuania';
-  const chile = 'Chile';
-  const vietnam = 'Vietnam';
-  const brazil = 'Brazil';
-  const peru = 'Peru';
-  const positions = 'Positions';
-  const designer = 'UI/UX designer';
-  const developerFront = 'Front-End Developer';
-  const hr = 'Human Resources manager';
-  const copywritter = 'Copywritter';
-  const salesTl = 'Sales Team Lead';
-  const seniority = 'Seniority';
-  const junior = 'Junior';
-  const mid = 'Mid level';
-  const senior = 'Senior';
-  const add = 'add';
-  const country = 'Country';
-  const desiredPosition = 'Desired Position';
+  // Labels
+  const labels = [
+    'Welcome',
+    'You can create categories here',
+    'Select your country',
+    'Select desired position',
+    'Select Seniority',
+    'Filter Categories',
+    'add',
+    'Country',
+    'Desired Position',
+    'Seniority',
+  ];
+  const countries = [
+    'Countries',
+    'Lithuania',
+    'Chile',
+    'Vietnam',
+    'Brazil',
+    'Peru',
+  ];
+  const positions = [
+    'Positions',
+    'UI/UX designer',
+    'Front-End Developer',
+    'Human Resources manager',
+    'Copywritter',
+    'Sales Team Lead',
+  ];
+
+  const seniority = ['Seniority', 'Junior', 'Mid level', 'Senior'];
 
   return (
     <div>
       <div className="category--container">
         <div className="category--header">
-          <h2>{welcome}</h2>
-          <h3>{createCategories}</h3>
+          <h2>{labels[0]}</h2>
+          <h3>{labels[1]}</h3>
         </div>
         <form className="category-form" onSubmit={handleAddFormSubmit}>
           <div className="position-wrapper">
             <div className="position-card">
               <label>
-                <h3 className="category-h3">{selectCountry}</h3>
+                <h3 className="category-h3">{labels[2]}</h3>
               </label>
               <select
                 name="yourCountry"
@@ -86,18 +92,18 @@ const CreateCategory = () => {
                 className="select-styling"
               >
                 <option value="Choose value" disabled>
-                  {countries}
+                  {countries[0]}
                 </option>
-                <option value="Lithuania">{lithuania}</option>
-                <option value="Chile">{chile}</option>
-                <option value="Vietnam">{vietnam}</option>
-                <option value="Brazil">{brazil}</option>
-                <option value="Peru">{peru}</option>
+                <option value="Lithuania">{countries[1]}</option>
+                <option value="Chile">{countries[2]}</option>
+                <option value="Vietnam">{countries[3]}</option>
+                <option value="Brazil">{countries[4]}</option>
+                <option value="Peru">{countries[5]}</option>
               </select>
             </div>
             <div className="position-card">
               <label>
-                <h3 className="category-h3">{selectPosition}</h3>
+                <h3 className="category-h3">{labels[3]}</h3>
               </label>
               <select
                 name="desiredPosition"
@@ -105,18 +111,18 @@ const CreateCategory = () => {
                 className="select-styling"
               >
                 <option value="Choose value" disabled>
-                  {positions}
+                  {positions[0]}
                 </option>
-                <option value="UI/UX designer">{designer}</option>
-                <option value="Front-End Developer">{developerFront}</option>
-                <option value="Human Resources manager">{hr}</option>
-                <option value="Copywritter">{copywritter}</option>
-                <option value="Sales Team Lead">{salesTl}</option>
+                <option value="UI/UX designer">{positions[1]}</option>
+                <option value="Front-End Developer">{positions[2]}</option>
+                <option value="Human Resources manager">{positions[3]}</option>
+                <option value="Copywritter">{positions[4]}</option>
+                <option value="Sales Team Lead">{positions[5]}</option>
               </select>
             </div>
             <div className="position-card">
               <label>
-                <h3 className="category-h3">{selectSeniority}</h3>
+                <h3 className="category-h3">{labels[4]}</h3>
               </label>
               <select
                 name="seniority"
@@ -124,23 +130,23 @@ const CreateCategory = () => {
                 className="select-styling"
               >
                 <option value="Choose value" disabled>
-                  {seniority}
+                  {seniority[0]}
                 </option>
-                <option value="Junior">{junior}</option>
-                <option value="Mid Level">{mid}</option>
-                <option value="Senior">{senior}</option>
+                <option value="Junior">{seniority[1]}</option>
+                <option value="Mid Level">{seniority[2]}</option>
+                <option value="Senior">{seniority[3]}</option>
               </select>
             </div>
           </div>
           <button type="submit" className="category-btn">
-            {add}
+            {labels[5]}
           </button>
           <div className="searchbar-wrapper"></div>
         </form>
         <div className="filter-list">
           <div className="filter-list__item">
             <label>
-              <h3 className="category-h3">{filterCategories}</h3>
+              <h3 className="category-h3">{labels[6]}</h3>
             </label>
           </div>
           <div className="filter-list__item">
@@ -158,9 +164,9 @@ const CreateCategory = () => {
       <table>
         <thead className="datas">
           <tr>
-            <th>{country}</th>
-            <th>{desiredPosition}</th>
-            <th>{seniority}</th>
+            <th>{labels[7]}</th>
+            <th>{labels[8]}</th>
+            <th>{labels[9]}</th>
           </tr>
         </thead>
         <tbody>
