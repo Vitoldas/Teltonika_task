@@ -181,7 +181,6 @@ function CreateUser() {
                 required
                 className="input--styles select-options"
                 onChange={handleChange}
-                select
               >
                 <option value="prefer not to say" className="reg-option">
                   {gender[0]}
