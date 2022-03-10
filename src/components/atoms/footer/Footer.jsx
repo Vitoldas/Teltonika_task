@@ -8,55 +8,61 @@ import Youtube from '../../../assets/youtube.png';
 import './footer.scss';
 
 const Footer = () => {
-  const teltonikaIot = 'Teltonika';
-  const teltonikaTelematics = 'Teltonika Telematics';
-  const teltonikaNetworks = 'Teltonika Networks';
-  const teltonikaMobility = 'Teltonika Mobility';
-  const teltonikaTelemedic = 'Teltonika Telemedic';
-  const teltonikaEms = 'Teltonika EMS';
-  const teltonikaEnergy = 'Teltonika Energy';
-  const teltonikaTech = 'Teltonika High-Tech Hill';
-  const news = 'News';
-  const newsroom = 'Newsroom';
-  const newsLetter = 'Newsletter';
-  const aboutUs = 'About Us';
-  const welcomeTeltonika = 'Welcome to Teltonika';
-  const values = 'Mission, Vision & Values';
-  const leadership = 'Leadership';
-  const policies = 'Policies & Certificates';
-  const contacts = 'Contacts';
-  const connect = 'Connect';
-  const copyrights = 'Copyright © TELTONIKA[S], 2022';
+  // teltonika
+  const teltonika = [
+    'Teltonika',
+    'Teltonika Telematics',
+    'Teltonika Networks',
+    'Teltonika Mobility',
+    'Teltonika Telemedic',
+    'Teltonika EMS',
+    'Teltonika Energy',
+    'Teltonika High-Tech Hill',
+  ];
+
+  // news
+  const news = ['News', 'Newsroom', 'Newsletter'];
+
+  // About Us
+  const aboutUs = [
+    'About Us',
+    'Mission, Vision & Values',
+    'Leadership',
+    'Policies & Certificates',
+    'Contacts',
+    'Connect',
+    'Copyright © TELTONIKA[S], 2022',
+  ];
 
   return (
     <footer className="footer--container">
       <div className="footer--wrapper">
         <ul>
-          <h3>{teltonikaIot}</h3>
-          <li>{teltonikaTelematics}</li>
-          <li>{teltonikaNetworks}</li>
-          <li> {teltonikaMobility}</li>
-          <li>{teltonikaTelemedic}</li>
-          <li>{teltonikaEms}</li>
-          <li>{teltonikaEnergy}</li>
-          <li>{teltonikaTech}</li>
+          <h3>{teltonika[0]}</h3>
+          <li>{teltonika[1]}</li>
+          <li>{teltonika[2]}</li>
+          <li> {teltonika[3]}</li>
+          <li>{teltonika[4]}</li>
+          <li>{teltonika[5]}</li>
+          <li>{teltonika[6]}</li>
+          <li>{teltonika[7]}</li>
         </ul>
         <ul>
-          <h3>{news}</h3>
-          <li>{newsroom}</li>
-          <li>{newsLetter}</li>
+          <h3>{news[0]}</h3>
+          <li>{news[1]}</li>
+          <li>{news[2]}</li>
         </ul>
         <ul className="about-us">
-          <h3>{aboutUs}</h3>
-          <li>{welcomeTeltonika}</li>
-          <li>{values}</li>
-          <li>{leadership}</li>
-          <li>{policies}</li>
-          <li>{contacts}</li>
+          <h3>{aboutUs[0]}</h3>
+          <li>{aboutUs[1]}</li>
+          <li>{aboutUs[2]}</li>
+          <li>{aboutUs[3]}</li>
+          <li>{aboutUs[4]}</li>
+          <li>{aboutUs[5]}</li>
         </ul>
         <div className="contact--wrap">
           <div className="newsletter">
-            <h3>{newsLetter}</h3>
+            <h3>{news[2]}</h3>
             <input
               type="text"
               placeholder="Email Address"
@@ -67,7 +73,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="connect">
-            <h3>{connect}</h3>
+            <h3>{aboutUs[4]}</h3>
             <div className="social">
               <div className="linked-in">
                 <a
@@ -109,7 +115,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="copyrights">
-            <p className="copyright--styling">{copyrights}</p>
+            <p className="copyright--styling">{aboutUs[6]}</p>
           </div>
         </div>
       </div>

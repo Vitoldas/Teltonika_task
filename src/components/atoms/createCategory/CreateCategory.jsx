@@ -139,14 +139,14 @@ const CreateCategory = () => {
             </div>
           </div>
           <button type="submit" className="category-btn">
-            {labels[5]}
+            {labels[6]}
           </button>
           <div className="searchbar-wrapper"></div>
         </form>
         <div className="filter-list">
           <div className="filter-list__item">
             <label>
-              <h3 className="category-h3">{labels[6]}</h3>
+              <h3 className="category-h3">{labels[5]}</h3>
             </label>
           </div>
           <div className="filter-list__item">
