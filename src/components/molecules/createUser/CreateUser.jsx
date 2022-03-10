@@ -80,28 +80,31 @@ function CreateUser() {
     return errors;
   };
   // labels
-  const name = 'Name';
-  const lastName = 'Last Name';
-  const password = 'Password';
-  const repeatPassword = 'Repeat Password';
-  const age = 'Age';
-  const gender = 'Gender';
-  const aboutUs = 'Where did you hear about us?';
-  const email = 'Email';
+  const createUserData = [
+    'Name',
+    'Last Name',
+    'Password',
+    'Repeat Password',
+    'Age',
+    'Gender',
+    'Email',
+    'Where did you hear about us?',
+  ];
+
   // Other
   const registration = 'Registration';
-  const choose = 'Choose';
   const onboarding = "Let's get you on board";
   const nextPage = 'Next Page';
-  const linkedIn = 'LinkedIn';
-  const twitter = 'Twitter';
-  const cvBank = 'CVbankas';
-  const facebook = 'Facebook';
-  const reddit = 'Reddit';
-  const toSay = 'Prefer not to say';
-  const male = 'Male';
-  const female = 'Female';
-  const other = 'Other';
+
+  const social = [
+    'Choose',
+    'LinkedIn',
+    'Twitter',
+    'CVbank',
+    'Facebook',
+    'Reddit',
+  ];
+  const gender = ['Prefer not to say', 'Male', 'Female', 'Other'];
 
   return (
     <div className="card--container">
@@ -113,7 +116,7 @@ function CreateUser() {
         <form onSubmit={handleSubmit}>
           <div className="card--main">
             <div className="input--wrapper input-media-620">
-              <label>{name}</label>
+              <label>{createUserData[0]}</label>
               <input
                 type="text"
                 name="firstName"
@@ -125,7 +128,7 @@ function CreateUser() {
               <p className="error-msg">{formErrors.firstName}</p>
             </div>
             <div className="input--wrapper input-media-620">
-              <label>{lastName}</label>
+              <label>{createUserData[1]}</label>
               <input
                 type="text"
                 name="lastName"
@@ -137,7 +140,7 @@ function CreateUser() {
               <p className="error-msg">{formErrors.lastName}</p>
             </div>
             <div className="input--wrapper input-media-620">
-              <label>{password}</label>
+              <label>{createUserData[2]}</label>
               <input
                 type="password"
                 name="password"
@@ -149,7 +152,7 @@ function CreateUser() {
               <p className="error-msg">{formErrors.password}</p>
             </div>
             <div className="input--wrapper input-media-620">
-              <label>{repeatPassword}</label>
+              <label>{createUserData[3]}</label>
               <input
                 type="text"
                 name="repeatPassword"
@@ -161,7 +164,7 @@ function CreateUser() {
               <p className="error-msg">{formErrors.repeatPassword}</p>
             </div>
             <div className="input--wrapper mg-top input-media-620">
-              <label>{age}</label>
+              <label>{createUserData[4]}</label>
               <input
                 type="number"
                 name="age"
@@ -173,7 +176,7 @@ function CreateUser() {
               <p className="error-msg">{formErrors.age}</p>
             </div>
             <div className="input--wrapper input-media-620 ">
-              <label>{gender}</label>
+              <label>{createUserData[5]}</label>
               <select
                 required
                 className="input--styles select-options"
@@ -181,22 +184,22 @@ function CreateUser() {
                 select
               >
                 <option value="prefer not to say" className="reg-option">
-                  {toSay}
+                  {gender[0]}
                 </option>
                 <option value="male" className="reg-option">
-                  {male}
+                  {gender[1]}
                 </option>
                 <option value="female" className="reg-option">
-                  {female}
+                  {gender[2]}
                 </option>
                 <option value="other" className="reg-option">
-                  {other}
+                  {gender[3]}
                 </option>
               </select>
             </div>
           </div>
           <div className="input--wrapper  input-media-620">
-            <label>{email}</label>
+            <label>{createUserData[6]}</label>
             <input
               type="email"
               name="email"
@@ -208,7 +211,7 @@ function CreateUser() {
             <p className="error-msg">{formErrors.email}</p>
           </div>
           <div className="input--wrapper about-us--form input-media-620">
-            <label>{aboutUs}</label>
+            <label>{createUserData[7]}</label>
             <select
               type="text"
               name="category"
@@ -219,34 +222,34 @@ function CreateUser() {
               onChange={handleChange}
             >
               <option value="Choose" className="reg-option">
-                {choose}
+                {social[0]}
               </option>
               <option
                 value="LinkedIn"
                 className="reg-option"
                 aria-label="LinkedIn"
               >
-                {linkedIn}
+                {social[1]}
               </option>
               <option value="CVBank" className="reg-option" aria-label="CVBank">
-                {cvBank}
+                {social[2]}
               </option>
               <option
                 value="Twitter"
                 className="reg-option"
                 aria-label="Twitter"
               >
-                {twitter}
+                {social[3]}
               </option>
               <option
                 value="Facebook"
                 className="reg-option"
                 aria-label="Facebook"
               >
-                {facebook}
+                {social[4]}
               </option>
               <option value="Reddit" className="reg-option" aria-label="Reddit">
-                {reddit}
+                {social[5]}
               </option>
             </select>
           </div>
