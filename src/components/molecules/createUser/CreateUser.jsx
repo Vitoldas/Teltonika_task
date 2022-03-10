@@ -12,6 +12,7 @@ function CreateUser() {
     email: '',
     age: '',
     category: '',
+    gender: '',
   };
 
   const [formValues, setFormValues] = useState(initialValues);
@@ -76,6 +77,14 @@ function CreateUser() {
       errors.age = '* You must be more 18 or older';
     } else if (values.age > 120) {
       errors.age = '* Your age is not possible';
+    }
+
+    if (!values.category) {
+      errors.category = '*You must select category';
+    }
+
+    if (!values.gender) {
+      errors.gender = '*You must select Gender';
     }
     return errors;
   };
@@ -181,6 +190,7 @@ function CreateUser() {
                 required
                 className="input--styles select-options"
                 onChange={handleChange}
+                value={formValues.gender}
               >
                 <option value="prefer not to say" className="reg-option">
                   {gender[0]}
@@ -195,6 +205,7 @@ function CreateUser() {
                   {gender[3]}
                 </option>
               </select>
+              <p className="error-msg">{formErrors.gender}</p>
             </div>
           </div>
           <div className="input--wrapper  input-media-620">
@@ -251,6 +262,7 @@ function CreateUser() {
                 {social[5]}
               </option>
             </select>
+            <p className="error-msg">{formErrors.category}</p>
           </div>
           <div className="btn-wrapper  input-media-620">
             <SubmitButton className="register-btn" />
